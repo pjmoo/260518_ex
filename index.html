@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
+        /* ── 기존 세팅 보존 ── */
         h1 {
             font-size: 100px;
             font-family: "Hi Melody", sans-serif;
@@ -43,53 +44,343 @@
         #id-style {
             color: yellow;
         }
+
+        /* ── 포트폴리오 전용 스타일 ── */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            background-color: #DCE2F0;
+            color: #2e2e2e;
+            line-height: 1.7;
+        }
+
+        /* 헤더 */
+        header {
+            background-color: #815854;
+            color: #DCE2F0;
+            padding: 60px 40px 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 52px;
+            font-family: "Hi Melody", sans-serif;
+            color: #DCE2F0;
+            margin-bottom: 8px;
+        }
+
+        header p.tagline {
+            font-size: 16px;
+            color: #e8dedd;
+            letter-spacing: 0.05em;
+        }
+
+        header .badge {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 5px 16px;
+            border: 1px solid #DCE2F0;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #DCE2F0;
+        }
+
+        /* 내비게이션 */
+        nav {
+            background-color: #6a4542;
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        nav a {
+            color: #DCE2F0;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* 공통 섹션 */
+        section {
+            max-width: 780px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        section h2 {
+            font-size: 22px;
+            color: #815854;
+            border-left: 4px solid #815854;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        /* 소개 카드 */
+        .intro-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 28px 30px;
+            box-shadow: 0 2px 8px rgba(129,88,84,0.08);
+        }
+
+        .intro-card p {
+            color: #444;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 기술 스택 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: #815854;
+            color: #DCE2F0;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* 프로젝트 */
+        .project-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(129,88,84,0.07);
+            border-left: 3px solid #815854;
+        }
+
+        .project-item h3 {
+            font-size: 17px;
+            color: #815854;
+            margin-bottom: 6px;
+        }
+
+        .project-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .project-item .stack {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #815854;
+            font-weight: 500;
+        }
+
+        /* 연락처 폼 */
+        .contact-form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(129,88,84,0.08);
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            margin-top: 16px;
+        }
+
+        .contact-form label:first-of-type {
+            margin-top: 0;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="password"],
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid #c9c3c2;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: #faf8f8;
+            color: #333;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: #815854;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-top: 6px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .contact-form button {
+            margin-top: 20px;
+            padding: 10px 26px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .btn-submit {
+            background-color: #815854;
+            color: #DCE2F0;
+        }
+
+        .btn-reset {
+            background-color: #DCE2F0;
+            color: #815854;
+            margin-left: 8px;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+            color: #888;
+            border-top: 1px solid #c8cedf;
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
-    <h1>저는 박정민입니다</h1>
-    <p>저는 취업을 희망합니다 진짜로 진심으로</p>
-    <p class="class-style2">저는 <strong>행복</strong>합니다</p>
-     <form action="#" method="GET">
-        
-      
-        <label for="user_id">아이디:</label>
-       
-        <input type="text" id="user_id" name="userId" placeholder="아이디를 입력하세요">
-        <br><br>
 
-        <label for="user_pw">비밀번호:</label>
-        <input type="password" id="user_pw" name="userPw">
-        <br><br>
+    <header>
+        <h1>박정민</h1>
+        <p class="tagline">Backend Developer · 3년차</p>
+        <span class="badge">Java · Spring · MySQL · Docker</span>
+    </header>
 
-        <label for="user_intro">자기소개:</label>
-        <textarea id="user_intro" name="userIntro" rows="3" cols="30"></textarea>
-        <br><br>
+    <nav>
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#contact">연락처</a>
+    </nav>
 
-        성별: 
-        <input type="radio" id="male" name="gender" value="m"> <label for="male">남성</label>
-        <input type="radio" id="female" name="gender" value="f"> <label for="female">여성</label>
-        <br><br>
+    <section id="about">
+        <h2>소개</h2>
+        <div class="intro-card">
+            <p>안녕하세요. 3년차 백엔드 개발자 pjm입니다.</p>
+            <p>주로 Java와 Spring 기반의 서버 개발을 해왔고, 안정적인 API 설계와 성능 개선에 관심이 많습니다.</p>
+            <p>최근에는 Docker와 CI/CD 파이프라인 구성에도 손을 대고 있습니다.</p>
+        </div>
+    </section>
 
-        관심 분야:
-        <input type="checkbox" id="coding" name="hobby" value="code"> <label for="coding">코딩</label>
-        <input type="checkbox" id="music" name="hobby" value="music"> <label for="music">음악</label>
-        <input type="checkbox" id="sports" name="hobby" value="sports"> <label for="sports">운동</label>
-        <br><br>
+    <section id="skills">
+        <h2>기술 스택</h2>
+        <div class="skills">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">JPA</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Linux</span>
+        </div>
+    </section>
 
-        <label for="region">거주 지역:</label>
-        <select id="region" name="userRegion">
-            <option value="seoul">서울</option>
-            <option value="wolsan">울산</option>
-            <option value="dejun">대전</option>
-            <option value="gwagju">광주</option>
-            <option value="incheon">인천</option>
-            <option value="busan">부산</option>
-            <option value="daegu">대구</option>
-            <option value="jeju">제주</option>
-        </select>
-        <br><br>
+    <section id="projects">
+        <h2>프로젝트</h2>
 
-        <button type="submit">가입하기 (데이터 전송)</button>
-        <button type="reset">초기화</button>
+        <div class="project-item">
+            <h3>사내 정산 자동화 시스템</h3>
+            <p>기존에 수작업으로 처리하던 월별 정산 프로세스를 API로 전환. 처리 시간을 80% 줄였습니다.</p>
+            <p class="stack">Java · Spring Batch · MySQL</p>
+        </div>
+
+        <div class="project-item">
+            <h3>회원 관리 API 서버</h3>
+            <p>JWT 기반 인증, 권한 분리, 페이지네이션 최적화까지 담당했습니다.</p>
+            <p class="stack">Spring Boot · JPA · Redis</p>
+        </div>
+
+        <div class="project-item">
+            <h3>배포 자동화 환경 구성</h3>
+            <p>GitHub Actions와 Docker Compose를 이용한 개발/운영 환경 분리 및 자동 배포 설정.</p>
+            <p class="stack">Docker · GitHub Actions · Linux</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>연락처</h2>
+        <div class="contact-form">
+            <form action="#" method="GET">
+
+                <label for="user_id">아이디:</label>
+                <input type="text" id="user_id" name="userId" placeholder="아이디를 입력하세요">
+
+                <label for="user_pw">비밀번호:</label>
+                <input type="password" id="user_pw" name="userPw">
+
+                <label for="user_intro">자기소개:</label>
+                <textarea id="user_intro" name="userIntro" rows="3"></textarea>
+
+                <label>성별:</label>
+                <div class="radio-group">
+                    <span><input type="radio" id="male" name="gender" value="m"> <label for="male">남성</label></span>
+                    <span><input type="radio" id="female" name="gender" value="f"> <label for="female">여성</label></span>
+                </div>
+
+                <label>관심 분야:</label>
+                <div class="checkbox-group">
+                    <span><input type="checkbox" id="coding" name="hobby" value="code"> <label for="coding">코딩</label></span>
+                    <span><input type="checkbox" id="music" name="hobby" value="music"> <label for="music">음악</label></span>
+                    <span><input type="checkbox" id="sports" name="hobby" value="sports"> <label for="sports">운동</label></span>
+                </div>
+
+                <label for="region">거주 지역:</label>
+                <select id="region" name="userRegion">
+                    <option value="seoul">서울</option>
+                    <option value="wolsan">울산</option>
+                    <option value="dejun">대전</option>
+                    <option value="gwagju">광주</option>
+                    <option value="incheon">인천</option>
+                    <option value="busan">부산</option>
+                    <option value="daegu">대구</option>
+                    <option value="jeju">제주</option>
+                </select>
+
+                <div>
+                    <button type="submit" class="btn-submit">가입하기</button>
+                    <button type="reset" class="btn-reset">초기화</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 pjm · Backend Developer</p>
+    </footer>
+
 </body>
 </html>
