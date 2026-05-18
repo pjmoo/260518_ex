@@ -1,32 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
-        p{
-            color: green;
-        }
+      p {
+        /* 색상 이름 */
+        /* color: green; */
+        /* 색 : 빨.초.파. */
+        /* color: #000000; */
+        /* color: #ffffff; */
+        /* color: #50f030; */
+        /* 각각의 빛(색) 강도를 0~255 -> 2^8 = 256 -> 16 x 16 = */
+        /* 10: a, 11: b, 12: c, 13: d, 14: e, 15: f */
+        /* font-size: 16px; */
+        /* cmd + / , ctrl + / */
+        font-size: 32px; /* css 주석 */
+        font-family: "Times New Roman", Times, serif;
+        /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
+        font-weight: 900;
+        font-weight: bold;
+        /* style */
+        font-style: italic;
+        font-style: normal;
+        /* text-*** */
+        text-align: center;
+        text-align: right;
+        text-decoration: underline;
+        text-decoration: line-through;
+        /* line-height: 48px; */
+        line-height: 1.8;
+      }
+      h1 {
+        /* color: brown; */
+      }
     </style>
-    <link rel="stylesheet" 
-    href="style.css" />
-    <style>
-        p{
-            font-size: 32px;
-        }
-        
-
-    </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <h1>제목</h1>
-    <p style="color: red;">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor tempora eos minima corporis dolorum, dicta adipisci at inventore provident quasi ullam impedit pariatur nemo odio consequuntur doloremque fuga minus fugit.
+    <p style="color: red">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta
+      accusamus dolores est eaque iste fugit facere vel eligendi culpa error
+      architecto nostrum ex quos, et nihil, laudantium explicabo deserunt.
     </p>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor tempora eos minima corporis dolorum, dicta adipisci at inventore provident quasi ullam impedit pariatur nemo odio consequuntur doloremque fuga minus fugit.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta
+      accusamus dolores est eaque iste fugit facere vel eligendi culpa error
+      architecto nostrum ex quos, et nihil, laudantium explicabo deserunt.
     </p>
-</body>
+  </body>
 </html>
